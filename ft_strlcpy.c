@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 20:00:07 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 19:02:18 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:11:51 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i]= '\0';
+	dst[i] = '\0';
 	return (len);
 }
 

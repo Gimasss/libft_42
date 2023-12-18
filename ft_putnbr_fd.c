@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 14:29:01 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 19:39:54 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:05:17 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putchar_fd(((nl % 10) + '0'), fd);
 }
 
-#include <fcntl.h>
+// #include <fcntl.h>
 
-int main(void)
-{
-	int fd = open("test.t", O_WRONLY);
-	ft_putnbr_fd(80084, fd);
-	close(fd);
+// int main(void)
+// {
+// 	int fd = open("test.t", O_WRONLY);
+// 	ft_putnbr_fd(80084, fd);
+// 	close(fd);
 
-	ft_putnbr_fd(0, 1);
-}
+// 	ft_putnbr_fd(0, 1);
+// }

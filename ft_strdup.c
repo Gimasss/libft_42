@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 16:21:18 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/15 16:38:22 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:06:50 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	size = ft_strlen(s);
 	dup = malloc(sizeof(char) * (size + 1));
-
 	if (!dup)
 		return (NULL);
-
 	while (s[i])
 	{
 		dup[i] = s[i];

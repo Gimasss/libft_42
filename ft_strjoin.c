@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 17:28:25 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 20:01:43 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:11:30 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,24 +28,23 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	char			*sc2;
 
 	i = 0;
-	sc1 = (char *)s1; // Cast const char* to char*
-	sc2 = (char *)s2; // Cast const char* to char*
-	cat = malloc(sizeof(char) * (ft_strlen(sc1) + 1));
+	sc1 = (char *)s1;
+	sc2 = (char *)s2;
+	cat = ft_calloc((ft_strlen(sc1) + 1), sizeof(char));
 	if (!cat)
 		return (NULL);
-	while (*sc1) // Use pointer dereference instead of sc1[i]
+	while (*sc1)
 	{
-		cat[i] = *sc1; // Assign value to cat[i]
+		cat[i] = *sc1;
 		i++;
 		sc1++;
 	}
-	while (*sc2) // Use pointer dereference instead of sc2[i]
+	while (*sc2)
 	{
-		cat[i] = *sc2; // Assign value to cat[i]
+		cat[i] = *sc2;
 		i++;
 		sc2++;
 	}
-	cat[i] = '\0'; // Add null terminator at the end of the concatenated string
 	return (cat);
 }
 /* 

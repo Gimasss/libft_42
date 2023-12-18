@@ -6,9 +6,11 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 14:08:01 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/14 19:24:38 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:11:02 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 //NOTES 
 /* 
@@ -21,15 +23,12 @@ the terminator
 (x) controllo sugli ascii - se mi viene passato un valore maggiore alla tabella,
 mi fa modulo del carattere passato cosi' da ritrovarmelo nella tabella
 */
-
-#include "libft.h"
-
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	if (c > 127) //(x)
+	if (c > 127)
 		c = c % 128;
 	while (s[i])
 	{
