@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 20:10:07 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 20:10:09 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:50:45 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,5 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
+int		ft_atoi(const char *str);
 #endif

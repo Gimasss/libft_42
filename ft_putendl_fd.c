@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 14:24:38 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 19:25:05 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:17:03 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', 1);
+	ft_putchar_fd('\n', fd);
 }

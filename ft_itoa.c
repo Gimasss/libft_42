@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 18:02:10 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 20:13:03 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:49:47 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ char	*ft_itoa(int nbr)
 	len = nbrlen(nbr);
 	n = nbr;
 	res = ft_calloc((len + 1), sizeof(char));
+	if (!res)
+		return (NULL);
 	len--;
 	if (n < 0)
 	{

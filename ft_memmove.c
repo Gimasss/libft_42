@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 17:05:10 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/14 18:56:05 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:52:32 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = (char *)dest;
 	s = (char *)src;
 	i = 0;
+	if (d == s)
+		return (dest);
 	if (d >= s && d <= s + n)
 	{
 		while (n--)

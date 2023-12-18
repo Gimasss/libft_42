@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 19:34:49 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/14 19:05:32 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:23:45 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	sp1 = (unsigned char *)s1;
 	sp2 = (unsigned char *)s2;
-	if (n == 0)
-		return (0);
 	i = 0;
-	while (sp1[i] && sp2[i] && sp1[i] == sp2[i] && i < n - 1)
+	while (i < n && sp1[i] == sp2[i])
 		i++;
+	if (i == n)
+		return (0);
 	return (sp1[i] - sp2[i]);
 }
 /* 
