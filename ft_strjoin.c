@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 17:28:25 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 18:54:27 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/18 20:01:43 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 /* 
 int main()
 {
-	char s1[] = "ma che bella ";
+	char s1[] = "zoccola";
 	char s2[] = "la cappella";
 	char *result = ft_strjoin(s1, s2); // Store the result in a variable
 	if (result)
