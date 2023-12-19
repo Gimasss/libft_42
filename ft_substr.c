@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 17:06:00 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/19 14:01:12 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/19 15:11:53 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,25 +28,40 @@ maximum size ’len’.
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	size_t			i;
+	size_t			s_len;
+	size_t			sub_len;
 	unsigned char	*sub;
 
+	i = 0;
 	if (!s)
 		return (NULL);
-	i = start;
-	sub = ft_calloc((len + 1), sizeof(char));
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	sub_len = s_len - start;
+	sub = ft_calloc((sub_len + 1), sizeof(char));
 	if (!sub)
 		return (NULL);
 	while (i < len)
 	{
-		sub[i] = s[i];
+		sub[i] = s[i + start];
 		i++;
 	}
 	return ((char *)sub);
 }
 
-/* int main()
+/* 
+alternativa:
+malloc ---> 
+ft_strlcpy(sub_len(dest), s + start (stringa in pos start), sub_len + 1)
+no need for calloc as I null terminate by giving the size in cpy.
+*/
+/* 
+int main()
 {
 	char s[] = "polletto arrosto";
-	printf("%s\n", ft_substr(s, 0, 8));
-	free ;
+	char *c;
+	c = ft_substr(s, 20, 1);
+	printf("%s\n", c);
+	free(c);
 } */

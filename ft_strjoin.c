@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 17:28:25 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/19 13:49:49 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/19 15:09:03 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	i = 0;
 	sc1 = (char *)s1;
 	sc2 = (char *)s2;
-	cat = ft_calloc((ft_strlen(sc1) + 1), sizeof(char));
+	cat = ft_calloc((ft_strlen(sc1) + ft_strlen(sc2) + 1), sizeof(char));
 	if (!cat)
 		return (NULL);
 	while (*sc1)
@@ -46,7 +46,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	}
 	return (cat);
 }
-/* 
+/*
 int main()
 {
 	char s1[] = "zoccola";

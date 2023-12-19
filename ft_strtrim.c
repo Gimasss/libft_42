@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 11:44:49 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/14 12:21:30 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/19 15:19:26 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	{
 		len--;
 	}
-	s1cpy = malloc(sizeof(char) * (len - i + 2));
+	s1cpy = malloc(sizeof(char) * (len - i + 1));
 	if (!s1cpy)
 		return (NULL);
 	while (i < len)
@@ -48,11 +48,12 @@ char	*ft_strtrim(const char *s1, const char *set)
 	s1cpy[j] = '\0';
 	return (s1cpy);
 }
+/* #include <string.h>
 
-/* int	main(void)
+int	main(void)
 {
-	char s1[] = "polletto";
-	char set[] = "po";
+	char s1[] = "poll\netto";
+	char set[] = "p\no";
 
 	printf("%s\n", ft_strtrim(s1, set));
 } */
