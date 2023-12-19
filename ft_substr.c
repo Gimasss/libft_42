@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 17:06:00 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 18:54:44 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/19 14:01:12 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t			i;
 	unsigned char	*sub;
 
+	if (!s)
+		return (NULL);
 	i = start;
-	sub = malloc(sizeof(char) * (len + 1));
+	sub = ft_calloc((len + 1), sizeof(char));
 	if (!sub)
 		return (NULL);
 	while (i < len)
@@ -39,7 +41,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		sub[i] = s[i];
 		i++;
 	}
-	sub[i] = '\0';
 	return ((char *)sub);
 }
 

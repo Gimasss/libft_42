@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 17:28:25 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 20:11:30 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/19 13:49:49 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ string, which is the result of the concatenation
 of ’s1’ and ’s2’. */
 
 #include "libft.h"
-#include <stdio.h> // Add missing import for printf
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {

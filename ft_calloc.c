@@ -6,7 +6,7 @@
 /*   By: gmastroc <gmastroc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 17:07:14 by gmastroc          #+#    #+#             */
-/*   Updated: 2023/12/18 19:17:22 by gmastroc         ###   ########.fr       */
+/*   Updated: 2023/12/19 13:37:44 by gmastroc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@
 	The calloc() function allocates memory for  an  array
 	   of  nmemb  elements  of size bytes each and returns a
 	   pointer to the allocated memory.  The memory  is  set
-	   to  zero.   If  nmemb or size is 0, then calloc() re‐
-	   turns either NULL, or a unique pointer value that can
-	   later  be successfully passed to free().  If the mul‐
-	   tiplication of nmemb and size would result in integer
-	   overflow,  then  calloc()  returns an error.  By con‐
-	   trast, an integer overflow would not be  detected  in
+	   to  zero.   If  nmemb/size = 0, calloc() re‐
+	   turns NULL/pointer value to be passed to free().
+	   If nmemb * size = int overflow, returns an error.  
+	   By contrast, an integer overflow would not be  detected  in
 	   the  following call to malloc(), with the result that
 	   an incorrectly sized block of memory would  be  allo‐
 	   cated:
