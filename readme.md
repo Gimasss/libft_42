@@ -1,3 +1,7 @@
+FIRST 42Core Project - no bonus part for the moment.
+100% passed by Moulinette.
+Random notes to be found around.
+
 MAKEFILE EXPLANATION
 
 A) The Makefile starts by defining some variables:
